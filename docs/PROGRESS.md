@@ -1,6 +1,6 @@
 # KisanSetu Progress
 
-Read this file and `.github/copilot-instructions.md` before starting work. The instructions file is not present in the repository yet.
+Read this file and `.github/copilot-instructions.md` before starting work.
 
 Only one numbered step is worked on at a time. Stop after the current step and wait for `next`.
 

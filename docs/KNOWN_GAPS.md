@@ -1,7 +1,5 @@
 # Known Gaps
 
-# Known Gaps
-
 These are intentionally not solved unless a later project step explicitly asks for them:
 
 - No real login yet; farmers are identified by an id and this must be solved before a real pilot.
