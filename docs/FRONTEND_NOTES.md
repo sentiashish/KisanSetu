@@ -14,6 +14,7 @@ These notes describe the current labour API contract for Phase 2. The frontend s
 ## API client rules
 
 - Prefix calls with `/api/v1`.
+- During local Vite development, `/api` is proxied to `http://127.0.0.1:3000` by `frontend/vite.config.js`.
 - Send `Content-Type: application/json` for POST requests.
 - Parse the standard `{ error: { code, message } }` shape for non-2xx responses.
 - Treat `429 RATE_LIMITED` as a temporary error and show a retry-later message.
