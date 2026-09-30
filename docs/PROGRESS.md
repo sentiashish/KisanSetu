@@ -6,9 +6,9 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 
 ## Current position
 
-- **Current step:** Phase 1, step B11
+- **Current step:** Phase 2, step F1
 - **Status:** Complete
-- **Next step:** Phase 1, step B12, only after the user says `next`
+- **Next step:** Phase 2, step F2, only after the user says `next`
 
 ## Phase 0: Setup
 
@@ -28,11 +28,11 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 - [x] B9 Add labour-request and reply rate limits.
 - [x] B10 Add temporary admin endpoints protected by `X-Admin-Key`.
 - [x] B11 Add backend tests.
-- [ ] B12 Write complete API and frontend integration documentation.
+- [x] B12 Write complete API and frontend integration documentation.
 
 ## Phase 2: Frontend for labour
 
-- [ ] F1 Set up Vite, React, Tailwind, routing, app shell, and tab bar.
+- [x] F1 Set up Vite, React, Tailwind, routing, app shell, and tab bar.
 - [ ] F2 Add Hindi-default internationalisation, English toggle, and glossary.
 - [ ] F3 Add central API access, mock mode, error handling, and `useFarmer`.
 - [ ] F4 Add shared components and pure money/date helpers.
