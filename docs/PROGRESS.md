@@ -18,7 +18,7 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 ## Phase 1: Backend for labour
 
 - [x] B1 Set up Express, scripts, backend folders, and migration runner.
-- [ ] B2 Add migration 001 and seed data for farmers, workers, and requests.
+- [x] B2 Add migration 001 and seed data for farmers, workers, and requests.
 - [ ] B3 Add `GET /api/v1/health` with a database connectivity check.
 - [ ] B4 Add farmers and workers endpoints.
 - [ ] B5 Add labour request endpoints and response counts.
