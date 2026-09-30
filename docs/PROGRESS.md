@@ -6,9 +6,9 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 
 ## Current position
 
-- **Current step:** Phase 1, step B9
+- **Current step:** Phase 1, step B11
 - **Status:** Complete
-- **Next step:** Phase 1, step B10, only after the user says `next`
+- **Next step:** Phase 1, step B12, only after the user says `next`
 
 ## Phase 0: Setup
 
@@ -26,8 +26,8 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 - [x] B7 Add the public worker reply endpoint.
 - [x] B8 Add validation and consistent error handling.
 - [x] B9 Add labour-request and reply rate limits.
-- [ ] B10 Add temporary admin endpoints protected by `X-Admin-Key`.
-- [ ] B11 Add backend tests.
+- [x] B10 Add temporary admin endpoints protected by `X-Admin-Key`.
+- [x] B11 Add backend tests.
 - [ ] B12 Write complete API and frontend integration documentation.
 
 ## Phase 2: Frontend for labour

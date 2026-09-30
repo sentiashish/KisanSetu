@@ -20,6 +20,41 @@ function sendRateLimitError(response) {
   });
 }
 
+function requireAdminKey(request, response, next) {
+  const configuredAdminKey = process.env.ADMIN_KEY;
+
+  if (!configuredAdminKey) {
+    return response.status(503).json({
+      error: {
+        code: 'ADMIN_NOT_CONFIGURED',
+        message: 'Admin access is not configured.'
+      }
+    });
+  }
+
+  const providedAdminKey = request.get('X-Admin-Key');
+
+  if (!providedAdminKey) {
+    return response.status(401).json({
+      error: {
+        code: 'ADMIN_KEY_REQUIRED',
+        message: 'Admin key is required.'
+      }
+    });
+  }
+
+  if (providedAdminKey !== configuredAdminKey) {
+    return response.status(403).json({
+      error: {
+        code: 'INVALID_ADMIN_KEY',
+        message: 'Admin key is invalid.'
+      }
+    });
+  }
+
+  return next();
+}
+
 app.use(express.json());
 
 app.get('/', (_request, response) => {
@@ -431,6 +466,51 @@ app.post('/api/v1/workers/reply', async (request, response) => {
       error: {
         code: 'REPLY_FAILED',
         message: 'Unable to record worker reply.'
+      }
+    });
+  }
+});
+
+app.get('/api/v1/admin/requests', requireAdminKey, async (_request, response) => {
+  try {
+    const [rows] = await pool.query(`
+      SELECT
+        lr.id,
+        lr.farmer_id,
+        f.name AS farmer_name,
+        lr.worker_id,
+        w.name AS worker_name,
+        lr.message,
+        lr.status,
+        lr.created_at,
+        lr.responded_at,
+        COUNT(DISTINCT lrep.id) AS response_count
+      FROM labour_requests lr
+      INNER JOIN farmers f ON f.id = lr.farmer_id
+      INNER JOIN workers w ON w.id = lr.worker_id
+      LEFT JOIN labour_replies lrep ON lrep.request_id = lr.id
+      GROUP BY
+        lr.id,
+        lr.farmer_id,
+        f.name,
+        lr.worker_id,
+        w.name,
+        lr.message,
+        lr.status,
+        lr.created_at,
+        lr.responded_at
+      ORDER BY lr.created_at DESC
+    `);
+
+    response.json(rows.map((row) => ({
+      ...row,
+      response_count: Number(row.response_count) || 0
+    })));
+  } catch (error) {
+    response.status(500).json({
+      error: {
+        code: 'GET_ADMIN_REQUESTS_FAILED',
+        message: 'Unable to load admin labour requests.'
       }
     });
   }
