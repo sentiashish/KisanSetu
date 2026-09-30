@@ -6,9 +6,9 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 
 ## Current position
 
-- **Current step:** Phase 1, step B1
+- **Current step:** Phase 1, step B9
 - **Status:** Complete
-- **Next step:** Phase 1, step B1, only after the user says `next`
+- **Next step:** Phase 1, step B10, only after the user says `next`
 
 ## Phase 0: Setup
 
@@ -19,13 +19,13 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 
 - [x] B1 Set up Express, scripts, backend folders, and migration runner.
 - [x] B2 Add migration 001 and seed data for farmers, workers, and requests.
-- [ ] B3 Add `GET /api/v1/health` with a database connectivity check.
-- [ ] B4 Add farmers and workers endpoints.
-- [ ] B5 Add labour request endpoints and response counts.
-- [ ] B6 Add the swappable console notifier and Hindi/English message templates.
-- [ ] B7 Add the public worker reply endpoint.
-- [ ] B8 Add validation and consistent error handling.
-- [ ] B9 Add labour-request and reply rate limits.
+- [x] B3 Add `GET /api/v1/health` with a database connectivity check.
+- [x] B4 Add farmers and workers endpoints.
+- [x] B5 Add labour request endpoints and response counts.
+- [x] B6 Add the swappable console notifier and Hindi/English message templates.
+- [x] B7 Add the public worker reply endpoint.
+- [x] B8 Add validation and consistent error handling.
+- [x] B9 Add labour-request and reply rate limits.
 - [ ] B10 Add temporary admin endpoints protected by `X-Admin-Key`.
 - [ ] B11 Add backend tests.
 - [ ] B12 Write complete API and frontend integration documentation.
