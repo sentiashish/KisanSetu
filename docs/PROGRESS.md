@@ -2,13 +2,13 @@
 
 Read this file and `.github/copilot-instructions.md` before starting work.
 
-Only one numbered step is worked on at a time. Stop after the current step and wait for `next`.
+Phase 2 frontend work was completed together at the user's request. Do not begin Phase 3 until the user says `Phase 3 done`.
 
 ## Current position
 
-- **Current step:** Phase 2, step F1
-- **Status:** Complete
-- **Next step:** Phase 2, step F2, only after the user says `next`
+- **Current position:** Phase 2 complete, Phase 3 blocked
+- **Status:** F2 through F10 complete
+- **Next step:** Wait for the user's explicit `Phase 3 done` after real-person testing
 
 ## Phase 0: Setup
 
@@ -33,15 +33,15 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 ## Phase 2: Frontend for labour
 
 - [x] F1 Set up Vite, React, Tailwind, routing, app shell, and tab bar.
-- [ ] F2 Add Hindi-default internationalisation, English toggle, and glossary.
-- [ ] F3 Add central API access, mock mode, error handling, and `useFarmer`.
-- [ ] F4 Add shared components and pure money/date helpers.
-- [ ] F5 Build the farmer start and consent flow.
-- [ ] F6 Build home and the guided labour-request flow.
-- [ ] F7 Build the labour-request status page.
-- [ ] F8 Build the worker list, add, edit, paste, and delete flows.
-- [ ] F9 Build the public worker reply page.
-- [ ] F10 Connect the frontend to the real backend and document mismatches.
+- [x] F2 Add Hindi-default internationalisation, English toggle, and glossary.
+- [x] F3 Add central API access, mock mode, error handling, and `useFarmer`.
+- [x] F4 Add shared components and pure money/date helpers.
+- [x] F5 Build the farmer start and consent flow.
+- [x] F6 Build home and the guided labour-request flow.
+- [x] F7 Build the labour-request status page.
+- [x] F8 Build the worker list, add, edit, paste, and delete flows.
+- [x] F9 Build the public worker reply page.
+- [x] F10 Connect the frontend to the real backend and document mismatches.
 
 ## Phase 3: Stop and test with real people
 

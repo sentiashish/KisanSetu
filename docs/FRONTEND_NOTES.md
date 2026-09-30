@@ -39,3 +39,12 @@ The API currently returns phone numbers for farmer and worker records. Display o
 - Request and reply rate limits are in-memory and reset when the server restarts; they are not shared across multiple server instances.
 - The temporary admin key is not production authentication.
 - Hindi copy is draft text and needs native-speaker review.
+- The backend currently exposes worker create/list only. Worker edit and delete are therefore device-local overrides in the frontend; they are not persisted to MySQL and should be replaced with backend endpoints before production use.
+- The browser farmer identity is a local device identity, not authentication. The consent checkbox records the user's acknowledgement before the existing farmer-create endpoint is called.
+
+## Implemented Phase 2 surfaces
+
+- Hindi is the default language; the header switches to English and stores the choice locally.
+- `VITE_USE_MOCK=true` supplies sample workers and requests for the dashboard, worker list, guided request flow, and reply page. Network failures expose offline states and API errors expose retry states.
+- The frontend routes are `/`, `/workers`, `/requests`, `/requests/new`, `/reply`, and `/help`.
+- Worker phone numbers are masked in the list. The public reply route expects `request_id` and `worker_id` query parameters and sends `yes`, `no`, or `stop` to the existing public endpoint.

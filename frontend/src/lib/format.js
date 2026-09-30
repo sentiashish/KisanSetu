@@ -1,0 +1,3 @@
+export function formatMoney(value, language = 'hi') { return new Intl.NumberFormat(language === 'hi' ? 'en-IN' : 'en-US', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Number(value) || 0) }
+export function formatDate(value, language = 'hi') { if (!value) return ''; return new Intl.DateTimeFormat(language === 'hi' ? 'hi-IN' : 'en-IN', { day: 'numeric', month: 'short' }).format(new Date(value)) }
+export function maskPhone(value) { return value ? `${String(value).slice(0, 2)}****${String(value).slice(-2)}` : '' }

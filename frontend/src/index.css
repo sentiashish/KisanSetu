@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, 'Segoe UI', sans-serif;
+  font-family: system-ui, 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
   color: #243047;
   background: #f3f7f5;
   font-synthesis: none;
@@ -13,4 +13,5 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  font-size: 18px;
 }
