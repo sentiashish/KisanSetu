@@ -48,7 +48,7 @@ Build the labour feature end to end before crop costs. Prices, support price, an
 - Missing data says `जानकारी उपलब्ध नहीं`. Sample/mock data visibly says `नमूना डेटा`.
 - Do not provide crop-disease diagnosis, pesticide advice, or fertilizer doses.
 - Do not use verified, ratings, or reliable-worker labels. Show only actual replies.
-- Do not build a marketplace, buyer listings, equipment booking, payments, AI chatbot, WhatsApp UI, or coming-soon cards.
+- Do not build a marketplace, buyer listings, equipment booking, payments, chatbot, WhatsApp UI, or coming-soon cards.
 - Do not convert between bigha, katha, acre, or other area units. Store the value and the unit chosen by the farmer.
 
 ## Privacy and known gaps

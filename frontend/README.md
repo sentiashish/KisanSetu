@@ -1,3 +1,32 @@
+# KisanSetu frontend
+
+This folder contains the React frontend for KisanSetu. It is a simple farmer-facing app with Hindi as the default language.
+
+## Run
+
+From the repository root:
+
+```powershell
+npm run dev --prefix frontend
+```
+
+The app opens at `http://127.0.0.1:5173`. In local development, API calls are sent through the Vite proxy to the backend at `http://127.0.0.1:3000`.
+
+For sample data, use:
+
+```powershell
+$env:VITE_USE_MOCK='true'
+npm run dev --prefix frontend -- --port 5174
+```
+
+## Checks
+
+```powershell
+npm run lint --prefix frontend
+npm run build --prefix frontend
+```
+
+The main user flow is: save farmer details, add a known worker, send a labour request, and view the reply. There is no connected SMS or WhatsApp service yet, so workers use the reply page manually during testing.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
