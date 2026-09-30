@@ -19,7 +19,7 @@ Copy-Item .env.example .env
 npm run dev
 ```
 
-The API runs on `http://localhost:3000` when the backend is implemented. Database setup and connection details are covered in Phase 0, step 0.2 before database commands are used.
+The API runs on `http://localhost:3000` when the backend is implemented. The project uses MySQL through `mysql2`. Set `DATABASE_URL` in `.env` to your local MySQL connection before running database commands.
 
 ## Progress
 

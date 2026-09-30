@@ -6,18 +6,18 @@ Only one numbered step is worked on at a time. Stop after the current step and w
 
 ## Current position
 
-- **Current step:** Phase 0, step 0.1
+- **Current step:** Phase 1, step B1
 - **Status:** Complete
-- **Next step:** Phase 0, step 0.2, only after the user says `next`
+- **Next step:** Phase 1, step B1, only after the user says `next`
 
 ## Phase 0: Setup
 
 - [x] 0.1 Create the folder structure, gitignore, environment examples, root README, progress tracker, and known-gaps document.
-- [ ] 0.2 Explain PostgreSQL installation or local connection on Windows, ask before choosing a tool, create the `kisansetu` database, and explain connection strings.
+- [x] 0.2 Explain MySQL installation or local connection on Windows, create the `kisansetu` database, and explain connection strings. MySQL 8.0 is running locally and the project connection was verified.
 
 ## Phase 1: Backend for labour
 
-- [ ] B1 Set up Express, scripts, backend folders, and migration runner.
+- [x] B1 Set up Express, scripts, backend folders, and migration runner.
 - [ ] B2 Add migration 001 and seed data for farmers, workers, and requests.
 - [ ] B3 Add `GET /api/v1/health` with a database connectivity check.
 - [ ] B4 Add farmers and workers endpoints.

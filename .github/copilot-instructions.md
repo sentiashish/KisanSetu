@@ -19,7 +19,7 @@ Build the labour feature end to end before crop costs. Prices, support price, an
 ## Technical rules
 
 - Frontend: Vite + React JavaScript, Tailwind CSS, `react-router-dom`, and `lucide-react` only for UI libraries. Use system fonts with a Devanagari fallback.
-- Backend: Node.js + Express ES modules, PostgreSQL with `pg` and plain SQL, `dotenv`, `cors`, Vitest, and Supertest.
+- Backend: Node.js + Express ES modules, MySQL with `mysql2` and plain SQL, `dotenv`, `cors`, Vitest, and Supertest.
 - API base path is `/api/v1`. Return JSON only. Errors use `{ "error": { "code": "SOME_CODE", "message": "..." } }`.
 - Money is integer rupees, never floats. Dates are `YYYY-MM-DD`.
 - Migrations are numbered SQL files in `database/migrations` and run in order by a small script.
@@ -60,4 +60,4 @@ Build the labour feature end to end before crop costs. Prices, support price, an
 
 ## Scope guardrails
 
-Do not continue to the next numbered step without the user's `next`. Do not start PostgreSQL setup until Phase 0.2. Do not start crops until the labour feature is complete and the user has finished Phase 3 testing.
+Do not continue to the next numbered step without the user's `next`. Do not start MySQL setup until Phase 0.2. Do not start crops until the labour feature is complete and the user has finished Phase 3 testing.
